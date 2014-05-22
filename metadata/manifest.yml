@@ -103,12 +103,12 @@ Endpoints:
         Backend:       ""
         Options:       { health: true }
   - Private-IP-Name:   IP
-      Private-Port-Name: MQTT_PORT
-      Private-Port:      1883
-      Public-Port-Name:  MQTT_PROXY_PORT
-      Mappings:
-        - Frontend:      ""
-        - Backend:       ""
+    Private-Port-Name: MQTT_PORT
+    Private-Port:      1883
+    Public-Port-Name:  MQTT_PROXY_PORT
+    Mappings:
+      - Frontend:      ""
+      - Backend:       ""
 Version-Overrides:
   '0.6':
     Display-Name: NodeJS 0.6
