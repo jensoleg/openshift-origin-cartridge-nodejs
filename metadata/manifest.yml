@@ -4,7 +4,7 @@ Display-Name: Node.js 0.10
 Description: "Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js is perfect for data-intensive real-time applications that run across distributed devices."
 Version: "0.10"
 Versions: ['0.10', '0.6']
-Source-Url: https://github.com/wshearn/openshift-origin-cartridge-nodejs.git
+Source-Url: https://github.com/jensoleg/openshift-origin-cartridge-nodejs.git
 License: MIT License
 License-Url: https://raw.github.com/joyent/node/v0.6/LICENSE
 Vendor: www.nodejs.org
@@ -102,6 +102,13 @@ Endpoints:
       - Frontend:      "/health"
         Backend:       ""
         Options:       { health: true }
+  - Private-IP-Name:   IP
+      Private-Port-Name: MQTT_PORT
+      Private-Port:      1883
+      Public-Port-Name:  MQTT_PROXY_PORT
+      Mappings:
+        - Frontend:      ""
+        - Backend:       ""
 Version-Overrides:
   '0.6':
     Display-Name: NodeJS 0.6
